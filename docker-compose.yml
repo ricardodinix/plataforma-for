@@ -20,4 +20,4 @@ services:
                 depends_on:
                         - forpdi-backend
                 ports:
-                        - 80:80
+                        - 53871:80
