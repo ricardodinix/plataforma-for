@@ -34,16 +34,49 @@ docker-compose up
 
 
 ## Stack de tecnologias utilizadas
-- Banco de dados MySQL 5.7
-- Hibernate/JPA como framework de persistência
-- VRaptor 4 como framework MVC
-- Java EE 7 com JDK 1.8, CDI 1.2 (Weld 2) e JPA 2
-- Servidor de aplicação: WildFly 9.0.2
-- Serviços baseados em REST
-- Frontend web desacoplado:
-  - React.js
-  - Backbone.js
-  - Webpack
+
+### Backend (Java)
+
+| Categoria | Tecnologia | Versão |
+|-----------|------------|--------|
+| **Linguagem** | Java | 1.8 |
+| **App Server** | WildFly | 9.0.2 |
+| **Framework Web** | VRaptor | 4.1.4 |
+| **ORM** | Hibernate | 5.x |
+| **Banco de Dados** | MySQL | 5.7 |
+| **CDI** | Weld | 2.2.16 |
+| **Agendamento** | Quartz | 2.2.2 |
+| **JSON** | Gson | 2.4 |
+| **PDF** | iTextPDF | 5.5.10 |
+| **Planilhas** | Apache POI | 3.16 |
+| **Email** | Commons Email | 1.5 |
+| **Testes** | JUnit, Mockito, Arquillian | - |
+
+### Frontend (JavaScript)
+
+| Categoria | Tecnologia | Versão |
+|-----------|------------|--------|
+| **UI Library** | React | 15.x |
+| **State Management** | Flux | 3.1.3 |
+| **Data Layer** | Backbone | 1.4.0 |
+| **CSS Framework** | Bootstrap | 3.4.1 |
+| **Bundler** | Webpack | 4.36.1 |
+| **Transpiler** | Babel | 6.x |
+| **Roteamento** | React Router | 2.4.0 |
+| **Editor Rich Text** | Quill / React-Quill | 1.3.x |
+| **Gráficos** | React Google Charts | 1.6.6 |
+| **Datas** | Moment.js | 2.24.0 |
+| **Tabelas** | React Table | 6.9.2 |
+| **Notificações** | Toastr | 2.1.4 |
+
+### Infraestrutura
+
+| Componente | Tecnologia |
+|------------|------------|
+| **Web Server** | Apache HTTPD 2.4 |
+| **Containers** | Docker / Docker Compose |
+| **Build Backend** | Maven 3.x |
+| **Build Frontend** | Yarn / Webpack |
 
 
 ## Pré-requisitos
