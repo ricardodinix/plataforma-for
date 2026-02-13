@@ -50,6 +50,12 @@ import ProfileUser from "forpdi/jsx/core/view/user/ProfileUser.jsx";
 
 import Dashboard from "forpdi/jsx/dashboard/view/DashboardPanel.jsx";
 import Community from "forpdi/jsx/dashboard/view/DashboardCommunityView.jsx";
+import UserDashboardPanel from "forpdi/jsx/dashboard/view/UserDashboardPanel.jsx";
+import CustomDashboardView from "forpdi/jsx/dashboard/view/CustomDashboardView.jsx";
+
+import StrategicObjectiveList from "forpdi/jsx/planning/view/strategic/StrategicObjectiveList.jsx";
+import ProjectList from "forpdi/jsx/planning/view/strategic/ProjectList.jsx";
+import AuditLogView from "forpdi/jsx/planning/view/strategic/AuditLogView.jsx";
 
 import BudgetElement from "forpdi/jsx/planning/view/budget/BudgetElement.jsx";
 
@@ -194,6 +200,11 @@ ReactDOM.render((
 
 			<Route path="" component={ForPDIApplication}>
 				<Route path="home" component={Dashboard} />
+				<Route path="my-dashboard" component={UserDashboardPanel} />
+				<Route path="custom-dashboards" component={CustomDashboardView} />
+				<Route path="strategic-objectives/:planMacroId" component={StrategicObjectiveList} />
+				<Route path="strategic-objective/:objectiveId/projects" component={ProjectList} />
+				<Route path="audit-log" component={AuditLogView} />
 				<Route path="login" component={Login} />
 				<Route path="users" component={Users}>
 					<Route path=":modelId/edit" component={UserEdit} />
