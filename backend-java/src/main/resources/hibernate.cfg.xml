@@ -103,6 +103,16 @@
   <mapping class="org.forrisco.risk.objective.RiskProcess"/>
   <mapping class="org.forrisco.risk.objective.RiskStrategy"/>
   <mapping class="org.forrisco.risk.RiskTipology"/>
+  <!-- New entities for strategic cascading, dashboards, audit, custom fields, and security -->
+  <mapping class="org.forpdi.planning.structure.StrategicObjective"/>
+  <mapping class="org.forpdi.planning.structure.Project"/>
+  <mapping class="org.forpdi.planning.structure.ProjectActionPlan"/>
+  <mapping class="org.forpdi.dashboard.DashboardPanel"/>
+  <mapping class="org.forpdi.dashboard.DashboardWidget"/>
+  <mapping class="org.forpdi.core.notification.AuditLog"/>
+  <mapping class="org.forpdi.core.notification.SecurityAuditLog"/>
+  <mapping class="org.forpdi.planning.fields.CustomField"/>
+  <mapping class="org.forpdi.planning.fields.CustomFieldValue"/>
   <!-- <event type="post-insert">
             <listener class="org.forrisco.risk.RiskInterceptor"/>
              listener class="org.hibernate.event.def.DefaultLoadEventListener"/>

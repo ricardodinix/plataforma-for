@@ -310,6 +310,26 @@ export default React.createClass({
                     /> {Messages.getEditable("label.dashboard","fpdi-nav-label", PermissionsTypes.EDIT_MESSAGES_PERMISSION)}
                 </Link>
     		</div>
+            <div className="fpdi-tabs-nav">
+    			<Link to="/my-dashboard" activeClassName="active">
+                    <span className="fpdi-nav-icon mdi mdi-account-circle icon-link"
+                    /> <span className="fpdi-nav-label">Meu Painel</span>
+                </Link>
+    		</div>
+            <div className="fpdi-tabs-nav">
+    			<Link to="/custom-dashboards" activeClassName="active">
+                    <span className="fpdi-nav-icon mdi mdi-view-dashboard-variant icon-link"
+                    /> <span className="fpdi-nav-label">Dashboards</span>
+                </Link>
+    		</div>
+            {(this.context.roles.ADMIN || this.context.accessLevel >= 30) ?
+                <div className="fpdi-tabs-nav">
+    			    <Link to="/audit-log" activeClassName="active">
+                        <span className="fpdi-nav-icon mdi mdi-history icon-link"
+                        /> <span className="fpdi-nav-label">Auditoria</span>
+                    </Link>
+    		    </div>
+            : ""}
             <div style={{height: "10px"}} />
             {this.state.plans && (this.state.plans.length > 0) ?
                 this.state.plans.map((plan, index) => {
