@@ -55,6 +55,7 @@ import CustomDashboardView from "forpdi/jsx/dashboard/view/CustomDashboardView.j
 
 import StrategicObjectiveList from "forpdi/jsx/planning/view/strategic/StrategicObjectiveList.jsx";
 import ProjectList from "forpdi/jsx/planning/view/strategic/ProjectList.jsx";
+import ActionPlanList from "forpdi/jsx/planning/view/strategic/ActionPlanList.jsx";
 import AuditLogView from "forpdi/jsx/planning/view/strategic/AuditLogView.jsx";
 
 import BudgetElement from "forpdi/jsx/planning/view/budget/BudgetElement.jsx";
@@ -204,6 +205,7 @@ ReactDOM.render((
 				<Route path="custom-dashboards" component={CustomDashboardView} />
 				<Route path="strategic-objectives/:planMacroId" component={StrategicObjectiveList} />
 				<Route path="strategic-objective/:objectiveId/projects" component={ProjectList} />
+				<Route path="project/:projectId/actions" component={ActionPlanList} />
 				<Route path="audit-log" component={AuditLogView} />
 				<Route path="login" component={Login} />
 				<Route path="users" component={Users}>

@@ -286,7 +286,7 @@ export default React.createClass({
 											{this.state.projects.map((p, idx) => (
 												<tr key={"proj-" + idx}>
 													<td>
-														<Link to={"/project/" + p.id + "/action-plans"}>
+														<Link to={"/project/" + p.id + "/actions"}>
 															<strong>{p.name}</strong>
 														</Link>
 													</td>

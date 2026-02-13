@@ -333,13 +333,21 @@ export default React.createClass({
             <div style={{height: "10px"}} />
             {this.state.plans && (this.state.plans.length > 0) ?
                 this.state.plans.map((plan, index) => {
-                    return <div className="fpdi-tabs-nav" key={"open-plan-"+index}>
-                        <Link to={"/plan/"+plan.id+"/"} activeClassName="active">
-                            <span className="fpdi-nav-icon mdi mdi-chart-bar icon-link" title = {plan.name}
-                                />  <span className="fpdi-nav-label" title = {plan.name}>
-                                    {(plan.name).length <= 24?plan.name:(plan.name).split("",20).concat(" ...")}
-                                </span>
-                        </Link>
+                    return <div key={"open-plan-"+index}>
+                        <div className="fpdi-tabs-nav">
+                            <Link to={"/plan/"+plan.id+"/"} activeClassName="active">
+                                <span className="fpdi-nav-icon mdi mdi-chart-bar icon-link" title = {plan.name}
+                                    />  <span className="fpdi-nav-label" title = {plan.name}>
+                                        {(plan.name).length <= 24?plan.name:(plan.name).split("",20).concat(" ...")}
+                                    </span>
+                            </Link>
+                        </div>
+                        <div className="fpdi-tabs-nav" style={{paddingLeft: "10px"}}>
+                            <Link to={"/strategic-objectives/"+plan.id} activeClassName="active">
+                                <span className="fpdi-nav-icon mdi mdi-target icon-link" title="Desdobramento Estratégico"
+                                    /> <span className="fpdi-nav-label">Desdobramento</span>
+                            </Link>
+                        </div>
                     </div>;
                 })
             :""}

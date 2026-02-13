@@ -277,7 +277,7 @@ export default React.createClass({
 												{this.state.objectives.map((obj, idx) => (
 													<tr key={"obj-" + idx}>
 														<td>
-															<Link to={"/strategic-objective/" + obj.id + "/details"}>
+															<Link to={"/strategic-objective/" + obj.id + "/projects"}>
 																<strong>{obj.name}</strong>
 															</Link>
 														</td>
@@ -314,12 +314,15 @@ export default React.createClass({
 								)}
 
 								<div className="text-center">
-									<Link to={"/strategic-objective/" + this.props.params.planMacroId + "/export"}
-										className="btn btn-default marginRight10">
+									<button className="btn btn-default marginRight10" onClick={() => {
+										StrategicObjectiveStore.dispatch({
+											action: StrategicObjectiveStore.ACTION_EXPORT_EXCEL,
+											data: { type: "objectives", planMacroId: this.props.params.planMacroId }
+										});
+									}}>
 										<span className="mdi mdi-file-excel" /> Exportar Excel
-									</Link>
-									<Link to={"/strategic-objective/" + this.props.params.planMacroId + "/audit"}
-										className="btn btn-default">
+									</button>
+									<Link to="/audit-log" className="btn btn-default">
 										<span className="mdi mdi-history" /> Histórico de Alterações
 									</Link>
 								</div>
